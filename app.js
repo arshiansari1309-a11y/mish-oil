@@ -287,10 +287,10 @@ function updateCheckoutTotals() {
   let city = "";
   if(shippingCityInput) city = shippingCityInput.value.trim().toLowerCase();
   
-  // Shipping logic: Kanpur = 50, else = 100
+  // Shipping logic: Kanpur = 50, else = 70
   let ship = 50; // default for Kanpur / empty
   if (city !== "kanpur" && city !== "") {
-    ship = 100;
+    ship = 70;
   }
   
   // COD logic
