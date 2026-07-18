@@ -174,7 +174,6 @@ const checkoutSuccessView = document.getElementById("checkout-success-view");
 const checkoutStep1 = document.getElementById("checkout-step-1");
 const checkoutStep2 = document.getElementById("checkout-step-2");
 const paymentSubmitBtn = document.getElementById("payment-submit-btn");
-const successEmail = document.getElementById("success-email");
 const successCloseBtn = document.getElementById("success-close-btn");
 const checkoutSubtotal = document.getElementById("checkout-subtotal");
 const checkoutShipping = document.getElementById("checkout-shipping");
@@ -370,9 +369,7 @@ function processMockOrder() {
     orderDetails += `*Grand Total:* ₹${tot.toFixed(2)}\n`;
     
     const whatsappUrl = `https://wa.me/918299827171?text=${encodeURIComponent(orderDetails)}`;
-    window.open(whatsappUrl, '_blank');
-
-    successEmail.innerText = document.getElementById("shipping-email").value;
+    window.location.href = whatsappUrl;
     
     checkoutFormView.style.display = "none";
     checkoutSuccessView.style.display = "block";
