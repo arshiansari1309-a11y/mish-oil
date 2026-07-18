@@ -4,59 +4,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shipping Policy | Mish Organics</title>
-  <meta name="description" content="Shipping policy for Mish Organics products.">
+  <title>Track Order | Mish Organics</title>
+  <meta name="description" content="Track your Mish Organics order easily via WhatsApp.">
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css?v=2">
   <style>
-    .policy-container {
-      padding: 120px 2rem 4rem;
-      max-width: 800px;
+    .track-container {
+      padding: 140px 2rem 4rem;
+      max-width: 600px;
       margin: 0 auto;
-      min-height: 60vh;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .policy-title {
+    .track-title {
       font-size: 2.5rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       color: var(--accent-gold-dark);
       text-align: center;
     }
-    .policy-card {
+    .track-subtitle {
+      text-align: center;
+      color: var(--text-secondary);
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+    }
+    .track-card {
       background: var(--glass-bg);
       border: 1px solid var(--glass-border);
       border-radius: var(--radius-lg);
-      padding: 2.5rem;
-      box-shadow: var(--shadow-sm);
+      padding: 3rem 2.5rem;
+      box-shadow: var(--shadow-md);
+      width: 100%;
+      text-align: center;
     }
-    .policy-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
+    .track-icon {
+      font-size: 4rem;
       color: var(--accent-gold);
+      margin-bottom: 1.5rem;
     }
-    .policy-card p {
-      font-size: 1.1rem;
+    .track-form-group {
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+    .track-form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
       color: var(--text-primary);
-      margin-bottom: 1.5rem;
-      line-height: 1.8;
+      font-weight: 500;
     }
-    .policy-list {
-      list-style-type: none;
-      margin-bottom: 1.5rem;
+    .track-input {
+      width: 100%;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-md);
+      color: var(--text-primary);
+      font-size: 1rem;
+      transition: var(--transition-fast);
     }
-    .policy-list li {
-      margin-bottom: 1rem;
-      font-size: 1.05rem;
+    .track-input:focus {
+      outline: none;
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 0 2px rgba(184, 134, 11, 0.2);
+    }
+    .track-btn {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+    .whatsapp-note {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
       color: var(--text-secondary);
       display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-    }
-    .policy-list li i {
-      color: var(--accent-green);
-      margin-top: 5px;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
     }
   </style>
 </head>
@@ -71,7 +100,7 @@
     <div class="container nav-wrapper">
       <!-- Logo -->
       <a href="index.html#home" class="logo" id="logo-link">
-        <img src="pictures/logo.jpeg" alt="Mish Organics Logo" style="height: 65px; object-fit: contain;">
+        <img src="logo.jpeg" alt="Mish Organics Logo" style="height: 65px; object-fit: contain;" onerror="this.src='pictures/logo.jpeg'">
         <span style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--accent-gold); white-space: nowrap;">Mish Organic</span>
       </a>
 
@@ -80,9 +109,8 @@
         <ul class="nav-menu" id="nav-menu">
           <li><a href="index.html#home" class="nav-link">Home</a></li>
           <li><a href="index.html#products" class="nav-link">Shop</a></li>
-          <li><a href="track-order.html" class="nav-link">Track Order</a></li>
+          <li><a href="track-order.html" class="nav-link active">Track Order</a></li>
           <li><a href="index.html#about" class="nav-link">Our Story</a></li>
-          <li><a href="index.html#benefits" class="nav-link">Benefits</a></li>
         </ul>
       </nav>
 
@@ -103,33 +131,25 @@
   </header>
 
   <main>
-    <div class="policy-container">
-      <h1 class="policy-title">Shipping & Delivery Policy</h1>
+    <div class="track-container">
+      <h1 class="track-title">Track Your Order</h1>
+      <p class="track-subtitle">Enter your Order ID below to get live updates directly from our studio.</p>
       
-      <div class="policy-card">
-        <h3>Delivery Locations & Charges</h3>
-        <p>At Mish Organics, we are committed to delivering our pure botanical products right to your doorstep. Please find our location-based shipping and payment policies below:</p>
-        
-        <ul class="policy-list">
-          <li>
-            <i class="fa-solid fa-location-dot"></i>
-            <div>
-              <strong>For Kanpur Location:</strong>
-              <br>Delivery Charge: ₹50
-              <br>Payment Options: Both Cash on Delivery (COD) and Online Payments are available.
-            </div>
-          </li>
-          <li>
-            <i class="fa-solid fa-truck-fast"></i>
-            <div>
-              <strong>For Outside Kanpur:</strong>
-              <br>Shipping Charge: ₹100
-              <br>Payment Options: Only Online Payments are accepted (COD is not available for locations outside Kanpur).
-            </div>
-          </li>
-        </ul>
-        
-        <p>If you have any questions regarding your delivery, feel free to reach out to our studio.</p>
+      <div class="track-card">
+        <i class="fa-solid fa-box-open track-icon"></i>
+        <form id="track-order-form">
+          <div class="track-form-group">
+            <label for="order-id">Order ID</label>
+            <input type="text" id="order-id" class="track-input" placeholder="e.g. MISH-12345" required>
+          </div>
+          <button type="submit" class="btn btn-primary track-btn">
+            Track via WhatsApp <i class="fa-brands fa-whatsapp" style="margin-left: 8px;"></i>
+          </button>
+        </form>
+        <div class="whatsapp-note">
+          <i class="fa-solid fa-shield-halved"></i> 
+          <span>You will be redirected securely to our official WhatsApp chat.</span>
+        </div>
       </div>
     </div>
   </main>
@@ -139,7 +159,7 @@
     <div class="container footer-grid">
       <div class="footer-col">
         <a href="index.html#home" class="logo" style="margin-bottom: 1rem;">
-          <img src="pictures/logo.jpeg" alt="Mish Organics Logo" style="height: 65px; object-fit: contain;">
+          <img src="logo.jpeg" alt="Mish Organics Logo" style="height: 65px; object-fit: contain;" onerror="this.src='pictures/logo.jpeg'">
           <span style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--accent-gold); white-space: nowrap;">Mish Organic</span>
         </a>
         <p class="footer-desc">
@@ -161,7 +181,7 @@
         <h4>Information</h4>
         <ul class="footer-links">
           <li><a href="index.html#about">About Our Roots</a></li>
-          <li><a href="index.html#benefits">Extraction Process</a></li>
+          <li><a href="track-order.html">Track Order</a></li>
           <li><a href="shipping-policy.html">Shipping Policy</a></li>
         </ul>
       </div>
@@ -184,5 +204,17 @@
       <p>&copy; 2026 Mish Organics. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('track-order-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const orderId = document.getElementById('order-id').value.trim();
+      if(orderId) {
+        const message = `Hello Mish Organics team! I would like to track my order. My Order ID is: ${orderId}`;
+        const whatsappUrl = `https://wa.me/918299827171?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+      }
+    });
+  </script>
 </body>
 </html>
