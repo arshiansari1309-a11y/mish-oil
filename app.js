@@ -341,6 +341,7 @@ function processMockOrder() {
   setTimeout(() => {
     // Generate WhatsApp Message
     const name = document.getElementById("shipping-name").value || "Customer";
+    const mobile = document.getElementById("shipping-mobile").value || "";
     const address = document.getElementById("shipping-address").value || "";
     const city = document.getElementById("shipping-city").value || "";
     const zip = document.getElementById("shipping-zip").value || "";
@@ -349,6 +350,7 @@ function processMockOrder() {
     
     let orderDetails = `🛍 *New Order from Mish Organics*\n\n`;
     orderDetails += `*Customer:* ${name}\n`;
+    orderDetails += `*Mobile:* ${mobile}\n`;
     orderDetails += `*Address:* ${address}, ${city} - ${zip}\n`;
     orderDetails += `*Payment Method:* ${isCOD ? 'Cash on Delivery' : 'Online Payment'}\n\n`;
     orderDetails += `*Order Items:*\n`;
